@@ -17,7 +17,7 @@
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": git+https:https://github.com/AndrewUl22/nodejs-hw/issues"
+    "url": git+https://github.com/AndrewUl22/nodejs-hw/issues"
   },
   "homepage": "git+https:https://github.com/AndrewUl22/nodejs-hw-hw#readme",
   "devDependencies": {
