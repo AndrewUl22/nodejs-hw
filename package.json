@@ -17,7 +17,7 @@
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": git+https://github.com/AndrewUl22/nodejs-hw/issues"
+    "url": "git+https://github.com/AndrewUl22/nodejs-hw/issues"
   },
   "homepage": "git+https:https://github.com/AndrewUl22/nodejs-hw-hw#readme",
   "devDependencies": {
@@ -30,6 +30,7 @@
     "cors": "^2.8.6",
     "dotenv": "^17.4.1",
     "express": "^5.2.1",
+    "http-errors": "^2.0.0",
     "pino-http": "^11.0.0",
     "pino-pretty": "^13.1.3"
   }
