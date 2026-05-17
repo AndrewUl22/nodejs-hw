@@ -8,5 +8,3 @@ export const TAGS = [
   'Finance',
   'Health',
   'Important',
-  'Todo',
-];
