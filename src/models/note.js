@@ -1,30 +1,31 @@
-import { Schema } from 'mongoose';
-import { model } from 'mongoose';
+import { Schema, model } from 'mongoose';
+import { TAGS } from '../constants/tags.js';
 
 const noteSchema = new Schema(
   {
-  title: {
-    type: String,
+    title: {
+      type: String,
       required: true,
-      trim: true, // прибирає пробіли на початку та в кінці
-    },
-  content: {
-   type: String,
       trim: true,
-      default: '', // за замовчуванням порожній рядок, якщо не вказано
+    },
+    content: {
+      type: String,
+      default: '',
+      trim: true,
     },
     tag: {
       type: String,
-      trim: true,
-    enum: ['Work', 'Personal', 'Meeting', 'Shopping', 'Ideas', 'Travel', 'Finance', 'Health', 'Important', 'Todo'],
-    default: 'Todo',
+      enum: TAGS,
+      default: 'Todo',
     },
-    },
-    {
-     timestamps: true,
-     versionKey: false,
-   },
+  },
+  {
+    timestamps: true,
+  },
 );
 
-export const Note = model('Note', noteSchema);
+noteSchema.index({ tag: 1 });
 
+const Note = model('Note', noteSchema);
+
+export { Note };
